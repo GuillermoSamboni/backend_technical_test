@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba técnica desarrollador Backend</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gray-100 text-gray-800 min-h-screen flex flex-col justify-center items-center p-4"
+  >
+    <header class="bg-white shadow rounded-lg p-4 mb-8">
+      <h1 class="text-2xl font-bold">Prueba técnica desarrollador Backend</h1>
+    </header>
+    <section class="max-w-3xl mx-auto">
+      <span
+        >Puedes realizar las siguientes peticiones desde el navegador sin
+        necesidad de autenticarse</span
+      >
+      <ul class="mt-6">
+        <li>
+          Productos :
+          <a
+            target="_blank"
+            class="rounded-lg shadow-md pr-6 pl-6 pt-1 pb-1"
+            href="https://backend-technical-test.onrender.com/api/v1/products/all"
+            >Abrir</a
+          >
+        </li>
+        <li class="mt-2">
+          Detalle de un producto :
+          <a
+            target="_blank"
+            class="rounded-lg shadow-md pr-6 pl-6 pt-1 pb-1"
+            href="https://backend-technical-test.onrender.com/api/v1/products/find/6643be21f23efdd8b7ebadd8"
+            >Abrir</a
+          >
+        </li>
+      </ul>
+      <p class="mt-2 mb-6">
+        Nota: Para ver esta funcionalidad, reemplaza en la url del navegador el
+        id del producto a consultar,
+        <br />
+        Despues de "/find/" debes reemplazar el id del producto
+        <br />
+        Las demás acciones
+        <strong>Registro de usuario</strong>
+        - <strong>Login</strong> - <strong>Registro producto</strong> -
+        <strong>Actualizar producto</strong> -
+        <strong>Eliminar producto</strong>
+
+        se requeiere autorización, por lo tanto puedes probar estas
+        funcionalidades desde <strong>Postman</strong>.
+      </p>
+
+      <p class="text-xl font-semibold mb-4">
+        Los recursos se encuentran en los siguientes links
+      </p>
+
+      <ul>
+        <li>
+          <div class="flex items-center gap-2">
+            Código fuente:
+            <a
+              target="_blank"
+              class="rounded-lg shadow-md pr-6 pl-6 pt-1 pb-1"
+              href="https://github.com/GuillermoSamboni/backend_technical_test"
+              >Abrir</a
+            >
+          </div>
+        </li>
+        
+        <li class="mt-2">
+          <div class="flex items-center gap-2">
+            Recursos desarrollo:
+            <a
+              target="_blank"
+              class="rounded-lg shadow-md pr-6 pl-6 pt-1 pb-1"
+              href="https://drive.google.com/drive/folders/1XJETuYv1dSPaCKOBmb6wBfd99RzIF5uK?usp=sharing"
+              >Abrir</a
+            >
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="max-w-3xl mx-auto mt-6">
+      <h2 class="text-xl font-semibold mb-4">Requerimientos</h2>
+      <p class="mb-4">
+        Se busca la creación de una plataforma integral destinada a facilitar a
+        los usuarios la comercialización de sus productos. Para lograr este
+        propósito, es imperativo integrar el Frontend con un desarrollo del lado
+        del servidor, conocido como Backend. En este contexto, se requiere que
+        el Backend ofrezca servicios esenciales, tales como el registro de
+        usuarios según su categoría y el registro de productos. Estos registros
+        de productos deben incluir operaciones CRUD (Crear, Leer, Actualizar y
+        Eliminar) para realizar todas las operaciones necesarias en relación con
+        los productos. Asimismo, se necesita implementar un sistema de
+        autenticación mediante un proceso de inicio de sesión que garantice el
+        acceso seguro a los servicios.
+      </p>
+      <p class="mb-4">
+        Es fundamental que los servicios construidos cuenten con mecanismos de
+        validación para asegurar la integridad y la corrección de los datos
+        proporcionados por los usuarios. Esta validación debe abordar aspectos
+        como la autenticidad de la información registrada y la adecuada
+        categorización de los usuarios.
+      </p>
+      <p class="mb-4">
+        Como último requisito, se solicita la implementación de una función de
+        búsqueda específica que permita localizar todos los productos asociados
+        a un usuario comerciante. La búsqueda se llevará a cabo utilizando el
+        identificador único del usuario (ID del usuario), proporcionando así una
+        herramienta eficiente para el comerciante que busca gestionar su
+        inventario de manera efectiva.
+      </p>
+      <h3 class="text-xl font-semibold mb-2 text-center">Autenticación</h3>
+      <aricle class="flex justify-evenly flex-wrap">
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Registro</h3>
+          <ul class="list-disc pl-6 mb-4">
+            <li>Nombre (Requerido)</li>
+            <li>Apellido (Requerido)</li>
+            <li>Email (Requerido y único)</li>
+            <li>Contraseña (Requerido, mínimo 6 caracteres)</li>
+            <li>Repetir contraseña (Requerido)</li>
+            <li>Tipo de usuario (Requerido)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Login</h3>
+          <ul class="list-disc pl-6 mb-4">
+            <li>Email (Requerido)</li>
+            <li>Contraseña (Requerido)</li>
+          </ul>
+        </div>
+      </aricle>
+
+      <h3 class="text-xl font-semibold mb-2 text-center">Productos</h3>
+      <aricle class="justify-center items-center flex-wrap">
+        <h3 class="text-lg font-semibold mb-2">Producto</h3>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Nombre Producto (Requerido)</li>
+          <li>Precio Producto (Requerido)</li>
+          <li>Cantidad disponible (Requerido)</li>
+          <li>Id_usuario</li>
+        </ul>
+      </aricle>
+
+      <h2 class="text-lg font-semibold mb-2">Solución</h2>
+      <ol class="list-disc pl-6 mb-4">
+        <li>El desarrollo debe ser abordado con Node.js.</li>
+        <li>
+          Subir el código a GitHub y compartir su URL en un entorno público.
+        </li>
+        <li>
+          Cada EP debe tener su descripción para ser probado desde Postman (si
+          es posible exportar el archivo de pruebas).
+        </li>
+      </ol>
+      <h2 class="text-lg font-semibold mb-2">Entrega</h2>
+      <ol class="list-disc pl-6 mb-4">
+        <li>Código fuente (GitHub).</li>
+        <li>
+          Archivo de exportación Postman para verificar EP o documentación
+          necesaria para probar su funcionamiento.
+        </li>
+        <li>
+          URL del servidor de pruebas, en el caso de no tenerlo compartirlo con
+          NGROK.
+        </li>
+        <li>
+          Video de creación y funcionalidad del sistema sin interrupciones.
+        </li>
+        <li>Envío a: <strong>Creatic</strong></li>
+      </ol>
+      <h2 class="text-lg font-semibold mb-2">Criterios de calificación</h2>
+      <ol class="list-disc pl-6 mb-4">
+        <li>Buenas prácticas de programación (1)</li>
+        <li>Estructura del proyecto (1)</li>
+        <li>Desarrollo con Node.js (1)</li>
+        <li>Video de creación y funcionalidad del sistema (2)</li>
+        <li>Funcionalidad de las APIs (3)</li>
+        <li>Subir al servidor de pruebas para verificar las APIs (2)</li>
+      </ol>
+    </section>
+  </body>
+</html>
