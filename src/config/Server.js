@@ -1,4 +1,5 @@
 //region imports
+const cors = require('cors');
 const express = require("express");
 const server = express();
 const morgan = require("morgan");
@@ -10,6 +11,8 @@ createRole();
 //region config dependences
 server.use(morgan("dev"));
 server.use(express.json());
+server.use(cors());
+
 //end region dependences
 
 //region products-routes
