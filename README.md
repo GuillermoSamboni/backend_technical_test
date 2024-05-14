@@ -43,8 +43,8 @@ efectiva.
 
 ### **Producción**
 
-- Render deployment: https://github.com/GuillermoSamboni/backend_technical_test
-- ngrok deployment: https://eadd-2803-1800-11c8-1a0d-3ce5-6aed-f57e-20aa.ngrok-free.app
+- Render deployment: https://backend-technical-test.onrender.com
+- ngrok deployment: https://527f-2803-1800-11c8-1a0d-3ce5-6aed-f57e-20aa.ngrok-free.app/
 - Monog Db Atlas: `Se realizo el despliegue de la base de datos en MongoDbAtlas`
 
 
